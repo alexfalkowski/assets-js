@@ -19,6 +19,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'rails', '~> 3.2.14'
 
   gem.add_development_dependency 'sqlite3'
+  gem.add_development_dependency 'uglifier'
   gem.add_development_dependency 'rspec-given'
   gem.add_development_dependency 'capybara'
   gem.add_development_dependency 'poltergeist'
