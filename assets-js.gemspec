@@ -17,8 +17,6 @@ Gem::Specification.new do |gem|
   gem.test_files = Dir['spec/**/*']
 
   gem.add_dependency 'rails', '~> 3.2.14'
-
-  gem.add_development_dependency 'sqlite3'
   gem.add_development_dependency 'uglifier'
   gem.add_development_dependency 'rspec-given'
   gem.add_development_dependency 'capybara'
