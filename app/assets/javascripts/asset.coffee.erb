@@ -1,0 +1,30 @@
+class @Asset
+  @deferred = new $.Deferred()
+
+  @localUri: =>
+    window.location.protocol + "//" + window.location.host
+
+  @path: (assePath) ->
+    deferred = new $.Deferred()
+    @_manifest(assePath).then (response) =>
+      prefixPath = "#{@_uri()}/assets/"
+      manifestPath = response[assePath]
+
+      if manifestPath
+        deferred.resolve("#{prefixPath}#{manifestPath}")
+      else
+        deferred.resolve("#{prefixPath}#{assePath}")
+
+    deferred.promise()
+
+  @_uri: ->
+    asset_path = "<%= Rails.application.config.action_controller.asset_host %>"
+    asset_path || @localUri()
+
+  @_manifest: (assePath) ->
+    if @deferred.state() is 'pending'
+      promise = $.getJSON("#{@localUri()}/manifests")
+      promise.success (response) =>
+        @deferred.resolve(response)
+
+    @deferred.promise()
