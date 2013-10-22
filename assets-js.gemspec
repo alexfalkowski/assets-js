@@ -21,4 +21,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec-given'
   gem.add_development_dependency 'capybara'
   gem.add_development_dependency 'poltergeist'
+  gem.add_development_dependency 'rspec-rails'
 end
