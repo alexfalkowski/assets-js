@@ -4,3 +4,4 @@ gemspec
 
 gem 'jquery-rails'
 gem 'coffee-rails'
+gem 'slim'
