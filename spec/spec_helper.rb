@@ -13,6 +13,7 @@ require 'capybara/rails'
 require 'capybara/rspec'
 require 'capybara/poltergeist'
 require 'rspec/given'
+require 'rspec/rails'
 require 'assets-js'
 
 Rails.backtrace_cleaner.remove_silencers!
