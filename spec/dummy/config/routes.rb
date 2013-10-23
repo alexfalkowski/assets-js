@@ -1,6 +1,4 @@
 Dummy::Application.routes.draw do
-  resources :home
-  resources :manifests
-
+  get 'home', to: 'home#index'
   root :to => 'home#index'
 end

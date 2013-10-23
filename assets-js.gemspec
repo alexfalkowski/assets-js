@@ -22,4 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'capybara'
   gem.add_development_dependency 'poltergeist'
   gem.add_development_dependency 'rspec-rails'
+  gem.add_development_dependency 'jquery-rails'
+  gem.add_development_dependency 'coffee-rails'
+  gem.add_development_dependency 'slim'
 end
